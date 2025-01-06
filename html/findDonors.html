@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="style/findDonors.css">
+    <link rel="icon" type="image/x-icon" href="images/GBF-icon-gbf.png">
+
+    <title>BloodDrop</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="./images/logo.jpg" > <h2>bloodDrop</h2></a>
+        <nav>
+            <ul class="navigation">
+                <li class="nav-item"><a href="index.html" class = "nav-link">Home</a></li>
+                <li class="nav-item"><a href="donate.html" class = "nav-link">Donate blood</a></li>
+                <li class="nav-item"><a href="FindDonors.html" class = "nav-link active">Find donors</a></li>
+                <li class="nav-item"><a href="Dashboard.php" class = "nav-link">Dashboard</a></li>
+                <li class="nav-item"><a href="aboutUs.html" class = "nav-link">About us</a></li>
+                <li class="nav-item"><a href="index.html#contactUs" class = "nav-link">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+
+    <section class="sec">
+        <div class="form-container">
+        <form action="backend/finddonners.php" method="post" class="Myform">
+            <h1>Find Blood Donors</h1>
+            <!-- Name Input -->
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            
+            <!-- Email Input -->
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <!-- Blood Type Selector -->
+            <label for="blood-type">Blood Type:</label>
+            <select id="blood-type" name="blood_type" required>
+                <option value="" >Select Blood Type</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+            
+            <!-- Governorates Dropdown -->
+            <label for="governorate">Governorate:</label>
+            <select id="governorate" name="governorate" required>
+                <option value="" >Select Governorate</option>
+                <option value="Alexandria">Alexandria</option>
+                <option value="Assiut">Assiut</option>
+                <option value="Aswan">Aswan</option>
+                <option value="Beheira">Beheira</option>
+                <option value="Beni_Suef">Beni Suef</option>
+                <option value="Cairo">Cairo</option>
+                <option value="Dakahlia">Dakahlia</option>
+                <option value="Damietta">Damietta</option>
+                <option value="Fayoum">Fayoum</option>
+                <option value="Gharbia">Gharbia</option>
+                <option value="Giza">Giza</option>
+                <option value="Ismailia">Ismailia</option>
+                <option value="Luxor">Luxor</option>
+                <option value="Matrouh">Matrouh</option>
+                <option value="Minya">Minya</option>
+                <option value="Monufia">Monufia</option>
+                <option value="New_Valley">New Valley</option>
+                <option value="North_Sinai">North Sinai</option>
+                <option value="Port_Said">Port Said</option>
+                <option value="Qalyubia">Qalyubia</option>
+                <option value="Qena">Qena</option>
+                <option value="Red_Sea">Red Sea</option>
+                <option value="Sharkia">Sharkia</option>
+                <option value="Sohag">Sohag</option>
+                <option value="South_Sinai">South Sinai</option>
+                <option value="Suez">Suez</option>
+            </select>
+    
+            <!-- Location Input -->
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter location" required>
+            
+            <!-- Age Filter (Optional) -->
+            <label for="age">Age (optional):</label>
+            <input type="number" id="age" name="age" min="18" max="70" placeholder="Age (18-70)">
+            
+            <!-- Search Button -->
+            <button type="submit">Find Donors</button>
+        </form>
+    </div>
+        
+        <div id="donor-results">
+            <!-- Results will be shown here -->
+        </div>
+
+    </section>
+    
+    
+
+    
+    <script src="script/script.js"></script>
+
+
+
+
+</body>
+</html>

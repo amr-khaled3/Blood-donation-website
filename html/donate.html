@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+        <link rel="stylesheet" href="style/donate.css">
+        <link rel="icon" type="image/x-icon" href="images/GBF-icon-gbf.png">
+    
+        <title>BloodDrop</title>
+    </head>
+<body>
+    <div id = "main">
+        <header id="header" >
+            <a href="index.html" class="logo"><img src="./images/logo.jpg" > <h2>bloodDrop</h2></a>
+            <nav>
+                <ul class="navigation">
+                    <li class="nav-item"><a href="index.html" class = "nav-link">Home</a></li>
+                    <li class="nav-item"><a href="donate.html" class = "nav-link active">Donate blood</a></li>
+                    <li class="nav-item"><a href="FindDonors.html" class = "nav-link">Find donors</a></li>
+                    <li class="nav-item"><a href="Dashboard.php" class = "nav-link">Dashboard</a></li>
+                    <li class="nav-item"><a href="aboutUs.html" class = "nav-link">About us</a></li>
+                    <li class="nav-item"><a href="index.html#contactUs" class = "nav-link">Contact us</a></li>
+                </ul>
+            </nav>
+            <button id = "back-to-top"><div>↑</div></button>
+        </header>
+
+
+        <section class="sec">
+            <div class="form-container">
+                <h1>Registeration</h1>
+                <form id = "form" action="backend/donate.php" method="post" class="Myform">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input id="name" type="text"  name="name" placeholder="Enter your full name" required>
+                        <i class="fa-solid fa-circle-check" id = "pass"></i>
+                        <i class="fa-solid fa-circle-exclamation" id = "fail"></i>
+                        <small id = "small"> Error massage </small>
+                    </div>
+                    <div class="form-group ">
+                        <label for="phone" > Phone </label>
+                        <input type="text" name="phone" id="phone" placeholder="+20">
+                        <i class="fa-solid fa-circle-check" id = "pass"></i>
+                        <i class="fa-solid fa-circle-exclamation" id = "fail"></i>
+                        <small id = "small"> Error massage </small>
+                    </div>
+                    <div class="form-group">
+                        <label for = "Email" > Email </label>
+                        <input type = "email" name = "email" id="Email" placeholder="Email">
+                        <label for="name"> </label>
+                        <i class="fa-solid fa-circle-check" id = "pass"></i>
+                        <i class="fa-solid fa-circle-exclamation" id = "fail"></i>
+                        <small id = "small"> Error massage </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="Age">Age:</label>
+                        <input type="number" id="age" name="age"  min="18" max="70" placeholder="Age (18-70)" required>
+                        <i class="fa-solid fa-circle-check" id = "pass"></i>
+                        <i class="fa-solid fa-circle-exclamation" id = "fail"></i>
+                        <small id = "small"> Error massage </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="Gender"> Gender </label>
+                        <select name="Gender" id="Gender" required>
+                            <option value="" >Select Gender</option>
+                            <option value="m"> Male </option>
+                            <option value="f"> Female </option>
+                            <option value="o"> Other </option>
+                        </select>
+                        <small id = "small"> Error massage </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="governorate">Governorate:</label>
+                        <select id="governorate" name="governorate" required>
+                            <option value="" >Select Governorate</option>
+                            <option value="Alexandria">Alexandria</option>
+                            <option value="Assiut">Assiut</option>
+                            <option value="Aswan">Aswan</option>
+                            <option value="Beheira">Beheira</option>
+                            <option value="Beni_Suef">Beni Suef</option>
+                            <option value="Cairo">Cairo</option>
+                            <option value="Dakahlia">Dakahlia</option>
+                            <option value="Damietta">Damietta</option>
+                            <option value="Fayoum">Fayoum</option>
+                            <option value="Gharbia">Gharbia</option>
+                            <option value="Giza">Giza</option>
+                            <option value="Ismailia">Ismailia</option>
+                            <option value="Luxor">Luxor</option>
+                            <option value="Matrouh">Matrouh</option>
+                            <option value="Minya">Minya</option>
+                            <option value="Monufia">Monufia</option>
+                            <option value="New_Valley">New Valley</option>
+                            <option value="North_Sinai">North Sinai</option>
+                            <option value="Port_Said">Port Said</option>
+                            <option value="Qalyubia">Qalyubia</option>
+                            <option value="Qena">Qena</option>
+                            <option value="Red_Sea">Red Sea</option>
+                            <option value="Sharkia">Sharkia</option>
+                            <option value="Sohag">Sohag</option>
+                            <option value="South_Sinai">South Sinai</option>
+                            <option value="Suez">Suez</option>
+                        </select>
+                        <small id = "small"> Error massage </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="donation-type">Donation Type:</label>
+                        <select id="donation-type" name="donation_type" required>
+                            <option value="" >Select your option</option>
+                            <option value="blood">Blood</option>
+                            <option value="plasma">Plasma</option>
+                        </select>
+                        <small id = "small"> Error massage </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="Blood_Type">Blood Type:</label>
+                        <select id="Blood_Type" name="Blood_Type" required>
+                            <option value="" >Select blood group</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                        </select>
+                        <small id = "small"> Error massage </small>
+                    </div>
+                    <div class="form-group">
+                        <label for = "Q1"> Was the last time you donated blood four months ago or more? </label>
+                        <select  id = "Q1" name ="Q1" required>
+                            <option value="" >Select your option</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                        <small id = "small"> Error massage </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="Q2"> Are you currently on any medication? </label>
+                        <select id="Q2" name = "Q2" required>
+                            <option value="" >Select your option</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No"> No </option>
+                        </select>
+                        <small id = "small"> Error massage </small>
+                    </div>
+                    <div class="form-group heddinQ" id = "additionalQuestion2">
+                        <label for="q2">What medication are you taking</label>
+                        <input type="text" id="q2" name = "add_Q2">
+                        <i class="fa-solid fa-circle-check" id = "pass"></i>
+                        <i class="fa-solid fa-circle-exclamation" id = "fail"></i>
+                        <small id = "small"> Error massage </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="Q3"> Do you have any chronic health conditions or infectious diseases? </label>
+                        <select id="Q3" name = "Q3" required>
+                            <option value="" >Select your option</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select> 
+                        <small id = "small"> Error massage </small>
+                    </div> 
+                    <div class="form-group heddinQ" id = "additionalQuestion3">
+                        <label for="q3">What chronic health condition(s) or infectious disease(s) do you have? </label>
+                        <input type="text" id = "q3" name = "add_Q3" >
+                        <i class="fa-solid fa-circle-check" id = "pass2"></i>
+                        <i class="fa-solid fa-circle-exclamation" id = "fail2"></i>
+                        <small id = "small"> Error massage </small>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id = "but">Submit</button>
+                    </div>
+                </form>
+        </section>
+    </div>
+
+
+    <!-- ----------------blood types------------------ -->
+    <section  class = "parallax" id = "bloodTypes">
+        <div id = "info">
+            <h1>Blood Types Needed</h1>
+            <h3>
+                Many variables can impact our blood inventories such as weather, holidays or tragic events.  Every day,
+                patients who need blood are in crisis and <strong style="color: rgb(2, 2, 131); font-size: larger;">you can help</strong> by volunteering to donate.  Less than 10% of the 
+                population gives blood, so donors that give on a regular basis are important to meet these needs.
+            </h3>
+        </div>
+        <!-- Image Map Generated by https://www.fla-shop.com/image-map/ -->
+        <img src="./images/BloodTypes.png" usemap="#image-map">
+        <map name="image-map">
+            <area alt="O-Positive" title="O-Positive" href="donate.html#O-Positive" coords="51,18,89,18,93,6,110,7,119,19,153,18,153,35,165,39,162,161,136,185,112,182,107,196,105,222,96,210,89,190,72,186,40,157,37,42" shape="poly"></area>
+            <area alt="O-Negative" title="O-Negative" href="donate.html#O-Negative" coords="229,19,266,19,279,7,296,18,330,19,334,32,344,44,343,157,312,185,286,185,282,234,272,185,248,191,216,153,215,42" shape="poly"></area>
+            <area alt="A-Positive" title="A-Positive" href="donate.html#A-Positive" coords="398,169,394,51,407,18,443,18,455,7,468,12,506,19,512,32,519,44,520,153,490,183,465,183,468,225,450,225,451,187,429,189" shape="poly"></area>
+            <area alt="A-Negative" title="A-Negative" href="donate.html#A-Negative" coords="584,19,623,19,629,8,641,10,651,22,684,19,690,31,698,42,699,157,669,186,642,185,640,203,640,225,631,210,633,186,604,186,576,158,570,44,579,35" shape="poly"></area>
+            <area alt="B-Positive" title="B-Positive" href="donate.html#B-Positive" coords="763,17,803,18,806,4,821,8,832,18,863,18,866,31,878,43,877,154,849,185,824,185,817,196,820,225,812,219,801,186,783,185,751,157,751,39" shape="poly"></area>
+            <area alt="B-Negative" title="B-Negative" href="donate.html#B-Negative" coords="941,19,978,18,985,4,1000,10,1010,19,1041,18,1053,39,1054,157,1028,185,999,185,995,226,982,186,960,187,931,155,927,37" shape="poly"></area>
+            <area alt="AB-Positive" title="AB-Positive" href="donate.html#AB-Positive" coords="1117,18,1156,18,1164,7,1175,10,1190,18,1218,18,1222,32,1233,47,1232,157,1207,185,1178,185,1172,197,1175,229,1167,212,1153,180,1136,185,1110,155,1107,40" shape="poly"></area>
+            <area alt="AB-Negative" title="AB-Negative" href="donate.html#AB-Negative" coords="1295,18,1333,18,1339,6,1354,8,1365,18,1399,17,1400,29,1411,46,1411,153,1383,183,1356,185,1350,197,1351,222,1338,186,1315,185,1288,155,1285,40" shape="poly"></area>
+        </map>
+    </section>
+    <div>
+
+        <!-- ----------------blood-info------------------ -->
+        <section>
+            <div id = "info">
+                <div id = "O-Positive" class="slide">
+                    <h1>O Positive</h1>
+                    <h3> 
+                        <p>they are compatible to any 
+                        red blood cells that are positive (A+, B+, O+, AB+). </p>
+                        <p>Over <strong style="font-size: larger;color: rgb(158, 161, 3);">80%</strong> of the population has a positive blood type 
+                        ,and can receive O positive blood. </p>
+                        That's another reason it's in such high demand.
+                    </h3>
+                </div>
+                <div id = "O-Negative" class = "slide">
+                    <h1>O Negative</h1>
+                    <h3> 
+                        <p>O negative is the most common blood type used for transfusions when the blood type is unknown.</p> 
+                        <p>This is why it is used most often in cases of trauma, emergency,</p> 
+                        <p>surgery and any situation where blood type is unknown.</p> 
+                        <p>O negative is the universal blood type.</p>
+                        <p>O negative blood type can only receive O negative blood.</p>
+                    </h3>
+                </div>
+                <div id = "A-Positive" class = "slide">
+                    <h1>A Positive</h1>
+                    <h3> 
+                        <p>1 in 3 people are type A positive, making it one of the most common blood types.</p> 
+                        <p> A positive blood is in high demand because it is present in a large percentage of the population.</p> 
+                        <p>Chemotherapy patients have a high demand for platelets from those with A positive blood.</p>
+                    </h3>
+                </div>
+                <div id = "A-Negative" class = "slide">
+                    <h1>A Negative</h1>
+                    <h3> 
+                        <p>Only 1 in 16 people have type A negative blood.</p> 
+                        <p>This means that A negative blood can be donated to anyone with a blood type of A or AB regardless of the positive or negative.</p> 
+                        <p>If you have A negative blood, you can only receive A- or O- blood.</p>
+                    </h3>
+                </div>
+                <div id = "B-Positive" class = "slide">
+                    <h1>B Positive</h1>
+                    <h3> 
+                        <p>About 9% of the population have B positive blood.</p>
+                        <p>B positive red blood cells can be given to both B positive and AB positive patients.</p> 
+                        <p>B positive patients can receive blood from B positive, B negative, O positive and O negative donors.</p>
+                    </h3>
+                </div>
+                <div id = "B-Negative" class = "slide">
+                    <h1>B Negative</h1>
+                    <h3> 
+                        <p>Less than <strong style="font-size: larger;color: rgb(158, 161, 3);">2%</strong> of the population has type B negative blood while about <strong style="font-size: larger;color: rgb(158, 161, 3);">9%</strong></p> 
+                        <p>has B positive blood. B negative red blood cells can be given to both B and AB patients.</p> 
+                        <p>B negative patients can only receive blood from other B negative donors or from type O negative donors,</p> 
+                        <p>who are the universal donors.</p>
+
+                    </h3>
+                </div>
+                <div id = "AB-Positive" class = "slide">
+                    <h1>AB Positive</h1>
+                    <h3> 
+                        <p>AB positive blood type is known as the “universal recipient” </p>
+                        <p>because AB positive patients can receive red blood cells from all blood types.</p>
+                    </h3>
+                </div>
+                <div id = "AB-Negative" class = "slide">
+                    <h1>AB Negative</h1>
+                    <h3> 
+                        <p>Type AB-negative blood is considered a universal plasma donor,</p> 
+                        <p>meaning anyone can receive type AB-negative plasma.</p> 
+                        <p>A patient with type AB-negative blood may receive any Rh-negative blood type.</p> 
+                        <p>The ideal donation types for type AB-negative are platelets or plasma.</p>
+                    </h3>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <script src="script/donate.js"></script>
+</body>
+</html>
