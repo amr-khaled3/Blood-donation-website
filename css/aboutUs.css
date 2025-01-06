@@ -1,0 +1,272 @@
+/* poppins fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+.section-pad{
+    padding:20px 40px;
+    
+}
+/* -----------------------header--------------------------- */
+header{
+    background-color: red ;
+    width:100%;
+    /* height:; */
+    position: sticky;
+    top:0;
+    left:0;
+    z-index:999;
+    display: flex;
+    justify-content:space-between; 
+    align-items: center;
+    padding: 10px 50px;
+}
+
+
+.logo{
+    text-transform: capitalize;
+    color:white;
+    text-decoration: none;
+    font-size:1.2em;
+    font-weight: 300;
+    padding: auto 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.navigation{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.navigation li a{
+    color:white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight:300;
+    padding: 6px 15px;
+    transition: .3s ease ;
+    border-radius: 20px;
+}
+.navigation li{
+    position: relative;
+}
+.nav-link:hover{
+    color:rgb(0, 0, 0);
+}
+.nav-link.active{ 
+    color:rgb(0, 0, 0);
+    background-color: #fff;
+}
+/* Hover effect for underline */
+nav ul li a.btn:where(:hover, :focus){
+  color:rgb(255, 255, 255);
+}
+.login{
+    color:white;
+    text-decoration: none;
+    font-size:1.2em;
+    font-weight: 300;
+    padding: auto 100px;
+}
+
+/* -----------------------about section--------------------------- */
+
+
+
+
+.sec{
+    background-image: url(../images/aboutUs.jpg); 
+    background-repeat: no-repeat;
+    height: calc(100vh - 64px);
+    width:100%;
+    background-size: cover;
+    background-position: top 0% right 0%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: sticky;
+    z-index: 0; /*when scroll it becomes lower layer*/
+    top:0;
+}
+.sec h1{
+    color:red;
+    padding-bottom:10px;
+}
+
+.sec p{
+    max-width: 600px;
+
+}
+.sec button{
+    border:solid red ;
+    border-radius: 10px;
+    background-color: red;
+    color:white;
+    width: 150px;
+    height:50px;
+    margin-top: 20px;
+    transition: 1s ease ;
+    cursor: pointer;
+}
+.sec button:hover{
+    transform: scale(0.97);
+}
+
+@media screen and (max-width: 1024px) {
+    .sec {
+        padding: 0 40px;
+        background-position: center;
+    }
+
+    .sec h1 {
+        font-size: 2em;
+    }
+
+    .sec p {
+        max-width: 500px;
+        font-size: 1em;
+    }
+
+    .sec button {
+        width: 130px;
+        height: 45px;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sec {
+        padding: 20px;
+        align-items: center; /* Center-align content */
+        text-align: center; /* Center text */
+    }
+
+    .sec h1 {
+        font-size: 1.8em;
+    }
+
+    .sec p {
+        max-width: 100%;
+        font-size: 0.95em;
+    }
+
+    .sec button {
+        width: 120px;
+        height: 40px;
+        font-size: 0.85em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sec {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sec h1 {
+        font-size: 1.5em;
+    }
+
+    .sec p {
+        max-width: 100%;
+        font-size: 0.9em;
+    }
+
+    .sec button {
+        width: 110px;
+        height: 35px;
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 10px 30px;
+    }
+
+    .logo {
+        font-size: 1em;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .navigation li a {
+        font-size: 1em;
+        padding: 5px 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navigation li {
+        margin-bottom: 10px;
+    }
+
+    .navigation li a {
+        font-size: 0.9em;
+        padding: 5px 10px;
+    }
+
+    .login {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .navigation li a {
+        font-size: 0.8em;
+        padding: 5px 8px;
+    }
+
+    .navigation {
+        align-items: center;
+    }
+
+    .login {
+        font-size: 0.9em;
+    }
+}

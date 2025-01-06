@@ -1,0 +1,273 @@
+/* poppins fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.section-pad {
+  padding: 20px 40px;
+}
+/* -----------------------header--------------------------- */
+header {
+  background-color: red;
+  width: 100%;
+  /* height:; */
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+}
+
+.logo {
+  position: relative;
+  text-transform: capitalize;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 300;
+  padding: auto 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.navigation {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.navigation li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 300;
+  padding: 6px 15px;
+  transition: 0.3s ease;
+  border-radius: 20px;
+}
+.navigation li {
+  position: relative;
+}
+.nav-link:hover {
+  color: rgb(0, 0, 0);
+}
+.nav-link.active {
+  color: rgb(0, 0, 0);
+  background-color: #fff;
+}
+/* Hover effect for underline */
+nav ul li a.btn:where(:hover, :focus) {
+  color: rgb(255, 255, 255);
+}
+.logo {
+  text-transform: capitalize;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 300;
+  padding: auto 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.navigation {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+/* -------------------------------------------------------------------------------------------------------------------- */
+
+.sec {
+  /* background-image: url("../images/background.jpg"); */
+  background-color: rgb(254, 254, 254);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top 0% right 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 64px);
+}
+
+.form-container {
+  background: #fff;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+.Myform{
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 20px rgba(205, 37, 37, 0.9);
+}
+.Myform input:hover{
+    box-shadow: 2px 2px 5px rgba(205, 37, 37, 0.9);
+    transform:translateY(-1px);
+}
+.Myform select:hover{
+    box-shadow: 2px 2px 5px rgba(205, 37, 37, 0.9);
+    transform:translateY(-1px);
+
+}
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d21111;
+}
+label {
+  font-weight: bold;
+}
+
+select,
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+select,
+input {
+  margin-bottom: 10px;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  border-color: #d9534f;
+  outline: none;
+}
+
+button {
+  background-color: #d21111;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e50b19;
+}
+
+#donor-results {
+  margin-top: 30px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: none; /* Initially hidden, will display once results are fetched */
+}
+
+.donor-card {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.donor-card h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #d9534f;
+}
+
+.donor-card p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .navigation {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navigation li a {
+    font-size: 0.9em;
+    padding: 5px 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sec {
+    padding: 10px;
+  }
+
+  .form-container {
+    max-width: 95%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .form-container h1 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  select,
+  input,
+  button {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #donor-results {
+    margin-top: 20px;
+    padding: 8px;
+  }
+
+  .donor-card h4 {
+    font-size: 16px;
+  }
+
+  .donor-card p {
+    font-size: 14px;
+  }
+}
